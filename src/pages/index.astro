@@ -1,10 +1,33 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
+
+import AppCard from "@/components/AppCard.astro";
 ---
 
 <MainLayout
   title="devChallenges | Testimonial Page"
   description="A devChallenges.io coding challenge."
 >
-  <!-- Begin your journey here... -->
+  <div class="flex flex-row">
+    <div class="flex flex-col">
+      <img src="" alt="Glowing star" />
+      <h1>Reviewers</h1>
+      <p>
+        Reviewers is where people can access guidelines, checklists, and other tools to assist them
+        in reviewing papers or manuscripts. It provides a structured approach to ensure that the
+        review process is thorough, efficient, and consistent.
+      </p>
+      <div>
+        <ul>
+          <li>Checklist to Review an Academic Paper</li>
+          <li>Peer Review Checklist</li>
+          <li>Checklist for Editors, Reviewers, and Authors of SPIE Journals</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex">
+      <AppCard />
+      <AppCard />
+    </div>
+  </div>
 </MainLayout>
