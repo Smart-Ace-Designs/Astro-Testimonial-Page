@@ -44,8 +44,9 @@ const reviews = [
     </div>
     <div class="flex flex-1 flex-col gap-4">
       {
-        reviews.map((review) => (
+        reviews.map((review, index) => (
           <AppCard
+            alignment={index % 2 === 0 ? "self-end" : "self-start"}
             name={review.name}
             rating={review.rating}
             review={review.review}
