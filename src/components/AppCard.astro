@@ -10,9 +10,11 @@ interface Props {
 const { name, rating, review, socialMedia, alignment }: Props = Astro.props;
 ---
 
-<article class:list={alignment}>
+<article
+  class:list={[alignment, "bg-theme-white shadow-theme-card flex flex-col gap-y-4 rounded-xl p-8"]}
+>
   <div class="flex flex-row items-center gap-x-4">
-    <img src={socialMedia} alt="" width={100} height={100} />
+    <img src={socialMedia} alt="" width={80} height={80} />
     <div class="flex flex-row gap-x-1">
       {
         Array.from({ length: rating }).map(() => (
@@ -26,6 +28,6 @@ const { name, rating, review, socialMedia, alignment }: Props = Astro.props;
       }
     </div>
   </div>
-  <h2 class="text-theme-black text-2xl font-bold">{name}</h2>
-  <p class="text-theme-gray">{review}</p>
+  <h2 class="text-theme-black text-xl font-bold">{name}</h2>
+  <p class="text-theme-gray text-base">{review}</p>
 </article>
