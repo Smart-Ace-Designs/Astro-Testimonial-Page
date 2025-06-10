@@ -17,6 +17,12 @@ const reviews = [
     socialMedia: "/meta-testimonial.svg",
   },
 ];
+
+const features = [
+  "Checklist to Review an Academic Paper",
+  "Peer Review Checklist",
+  "Checklist for Editors, Reviewers, and Authors of SPIE Journals",
+];
 ---
 
 <MainLayout
@@ -36,16 +42,13 @@ const reviews = [
       </p>
       <div>
         <ul class="flex flex-col gap-2">
-          <li class="flex flex-row items-center gap-2">
-            <img src="/Done_ring_round_fill.svg" alt="" /> Checklist to Review an Academic Paper
-          </li>
-          <li class="flex flex-row items-center gap-2">
-            <img src="/Done_ring_round_fill.svg" alt="" /> Peer Review Checklist
-          </li>
-          <li class="flex flex-row items-center gap-2">
-            <img src="/Done_ring_round_fill.svg" alt="" /> Checklist for Editors, Reviewers, and Authors
-            of SPIE Journals
-          </li>
+          {
+            features.map((feature) => (
+              <li class="flex flex-row items-center gap-2">
+                <img src="/Done_ring_round_fill.svg" alt="" /> {feature}
+              </li>
+            ))
+          }
         </ul>
       </div>
     </div>
