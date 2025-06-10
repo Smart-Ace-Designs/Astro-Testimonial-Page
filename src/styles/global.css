@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-theme-yellow: #f5c044;
+  --color-theme-green: #4ca154;
+  --color-theme-black: #18181b;
+  --color-theme-gray: #52525a;
+  --color-theme-light-gray: #d4d4d8;
+  --color-theme-off-white: #f4faf9;
+  --color-theme-white: #ffffff;
+
+  --font-sans: "Sora", sans-serif;
+}
+
+@font-face {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Sora-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/Sora-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/Sora-Bold.ttf") format("truetype");
+  font-display: swap;
+}
