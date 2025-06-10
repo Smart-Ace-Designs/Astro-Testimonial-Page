@@ -2,6 +2,21 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 
 import AppCard from "@/components/AppCard.astro";
+
+const reviews = [
+  {
+    name: "Samantha Lee",
+    rating: 4,
+    review: "The checklist ensures that the review process is thorough",
+    socialMedia: "/google-testimonial.svg",
+  },
+  {
+    name: "Rachel Patel",
+    rating: 5,
+    review: "I highly recommend the Writecream Business Description",
+    socialMedia: "/meta-testimonial.svg",
+  },
+];
 ---
 
 <MainLayout
@@ -28,18 +43,16 @@ import AppCard from "@/components/AppCard.astro";
       </div>
     </div>
     <div class="flex flex-1 flex-col gap-4">
-      <AppCard
-        name="Samantha Lee"
-        rating={4}
-        review="The checklist ensures that the review process is thorough"
-        socialMedia="/google-testimonial.svg"
-      />
-      <AppCard
-        name="Rachel Patel"
-        rating={5}
-        review="I highly recommend the Writecream Business Description"
-        socialMedia="/meta-testimonial.svg"
-      />
+      {
+        reviews.map((review) => (
+          <AppCard
+            name={review.name}
+            rating={review.rating}
+            review={review.review}
+            socialMedia={review.socialMedia}
+          />
+        ))
+      }
     </div>
   </div>
 </MainLayout>
