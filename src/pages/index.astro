@@ -9,10 +9,12 @@ import AppCard from "@/components/AppCard.astro";
   description="A devChallenges.io coding challenge."
 >
   <div class="flex flex-row">
-    <div class="flex flex-col">
-      <img src="" alt="Glowing star" />
-      <h1>Reviewers</h1>
-      <p>
+    <div class="flex flex-1 flex-col">
+      <div class="bg-theme-yellow flex size-12 items-center justify-center rounded-full text-xl">
+        ⭐️
+      </div>
+      <h1 class="text-theme-black text-4xl font-bold">Reviewers</h1>
+      <p class="text-theme-gray">
         Reviewers is where people can access guidelines, checklists, and other tools to assist them
         in reviewing papers or manuscripts. It provides a structured approach to ensure that the
         review process is thorough, efficient, and consistent.
@@ -25,7 +27,7 @@ import AppCard from "@/components/AppCard.astro";
         </ul>
       </div>
     </div>
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-1 flex-col gap-4">
       <AppCard
         name="Samantha Lee"
         rating={4}

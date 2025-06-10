@@ -12,7 +12,7 @@ const { name, rating, review, socialMedia }: Props = Astro.props;
 <article>
   <div class="flex flex-row items-center gap-x-4">
     <img src={socialMedia} alt="" width={100} height={100} />
-    <div class="flex flex-row gap-1">
+    <div class="flex flex-row gap-x-1">
       {
         Array.from({ length: rating }).map(() => (
           <img class="size-6" src="/Star_fill.svg" alt="Gold Star" />
