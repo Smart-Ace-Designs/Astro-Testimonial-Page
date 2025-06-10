@@ -11,9 +11,12 @@ const { name, rating, review, socialMedia, alignment }: Props = Astro.props;
 ---
 
 <article
-  class:list={[alignment, "bg-theme-white shadow-theme-card flex flex-col gap-y-4 rounded-xl p-8"]}
+  class:list={[
+    alignment,
+    "bg-theme-white shadow-theme-card flex w-[350px] flex-col gap-y-4 rounded-xl p-8",
+  ]}
 >
-  <div class="flex flex-row items-center gap-x-4">
+  <div class="flex flex-row items-center gap-x-3">
     <img src={socialMedia} alt="" width={80} height={80} />
     <div class="flex flex-row gap-x-1">
       {
