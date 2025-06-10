@@ -25,9 +25,19 @@ import AppCard from "@/components/AppCard.astro";
         </ul>
       </div>
     </div>
-    <div class="flex">
-      <AppCard />
-      <AppCard />
+    <div class="flex flex-col gap-4">
+      <AppCard
+        name="Samantha Lee"
+        rating={4}
+        review="The checklist ensures that the review process is thorough"
+        socialMedia="/google-testimonial.svg"
+      />
+      <AppCard
+        name="Rachel Patel"
+        rating={5}
+        review="I highly recommend the Writecream Business Description"
+        socialMedia="/meta-testimonial.svg"
+      />
     </div>
   </div>
 </MainLayout>
