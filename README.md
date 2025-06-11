@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://smartacedesigns-astro-testimonial-page.netlify.app/">
+    <a href="https://smartacedesigns-astro-testimonialpage.netlify.app/">
       Demo
     </a>
     <span> | </span>
