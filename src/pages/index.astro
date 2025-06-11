@@ -9,29 +9,32 @@ import { reviews, features } from "@/data/testimonials.ts";
   title="devChallenges | Testimonial Page"
   description="A devChallenges.io coding challenge."
 >
-  <div class="flex flex-row gap-10">
-    <div class="flex flex-1 flex-col gap-y-4">
-      <div class="bg-theme-yellow flex size-12 items-center justify-center rounded-full text-xl">
+  <div class="flex h-[420px] flex-row gap-10">
+    <section class="flex flex-1 flex-col gap-y-4" aria-labelledby="reviewers-heading">
+      <div
+        class="bg-theme-yellow flex size-12 items-center justify-center rounded-full text-xl"
+        aria-hidden="true"
+      >
         ⭐️
       </div>
-      <h1 class="text-theme-black text-4xl font-bold">Reviewers</h1>
+      <h1 id="reviewers-heading" class="text-theme-black text-4xl font-bold">Reviewers</h1>
       <p class="text-theme-gray text-xl leading-8.5">
         Reviewers is where people can access guidelines, checklists, and other tools to assist them
         in reviewing papers or manuscripts. It provides a structured approach to ensure that the
         review process is thorough, efficient, and consistent.
       </p>
 
-      <ul class="mt-auto flex flex-col gap-y-3">
+      <ul class="mt-auto flex flex-col gap-y-3" role="list" aria-label="Features">
         {
           features.map((feature) => (
             <li class="flex flex-row items-center gap-x-2 text-sm">
-              <img src="/Done_ring_round_fill.svg" alt="" /> {feature}
+              <img src="/Done_ring_round_fill.svg" alt="" aria-hidden="true" /> {feature}
             </li>
           ))
         }
       </ul>
-    </div>
-    <div class="flex flex-1 flex-col gap-y-8">
+    </section>
+    <section class="flex flex-1 flex-col gap-y-8" aria-label="Customer Reviews">
       {
         reviews.map((review, index) => (
           <AppCard
@@ -43,6 +46,6 @@ import { reviews, features } from "@/data/testimonials.ts";
           />
         ))
       }
-    </div>
+    </section>
   </div>
 </MainLayout>
