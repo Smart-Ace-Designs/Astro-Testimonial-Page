@@ -9,33 +9,9 @@
   --color-theme-off-white: #fafaf9;
   --color-theme-white: #ffffff;
 
-  --font-sans: "Sora", sans-serif;
-
-  --text-md: 17px;
+  --font-sora: "Sora", sans-serif;
 
   --shadow-theme-card: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
-}
 
-@font-face {
-  font-family: "Sora";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/Sora-Regular.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sora";
-  font-style: normal;
-  font-weight: 600;
-  src: url("/fonts/Sora-SemiBold.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Sora";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/Sora-Bold.ttf") format("truetype");
-  font-display: swap;
+  --text-md: 17px;
 }
