@@ -13,7 +13,7 @@ const { name, rating, review, socialMedia, alignment }: Props = Astro.props;
 <article
   class:list={[
     alignment,
-    "bg-theme-white shadow-theme-card flex w-full flex-col gap-y-2 rounded-xl px-10 py-7 md:w-[360px]",
+    "flex w-full flex-col gap-y-2 rounded-xl bg-theme-white px-10 py-7 shadow-theme-card md:w-[360px]",
   ]}
   role="article"
   aria-labelledby={`review-${name.toLowerCase().replace(/\s+/g, "-")}`}
@@ -35,9 +35,9 @@ const { name, rating, review, socialMedia, alignment }: Props = Astro.props;
   </div>
   <h2
     id={`review-${name.toLowerCase().replace(/\s+/g, "-")}`}
-    class="text-theme-black text-md font-semibold"
+    class="text-md font-semibold text-theme-black"
   >
     {name}
   </h2>
-  <p class="text-theme-gray leading-7">{review}</p>
+  <p class="leading-7 text-theme-gray">{review}</p>
 </article>
