@@ -17,7 +17,6 @@ export default defineConfig({
         cssVariable: "--font-sora",
         weights: [400, 600, 700],
         styles: ["normal"],
-        subsets: ["latin"],
       },
     ],
   },
