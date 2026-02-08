@@ -9,56 +9,58 @@ import { reviews, features } from "@/data/testimonials.ts";
   title="devChallenges | Testimonial Page"
   description="A devChallenges.io coding challenge."
 >
-  <section
-    class="mx-auto flex max-w-6xl flex-col gap-y-10 px-3 py-10 lg:px-8 xl:flex-row xl:gap-x-10 xl:px-0"
-    aria-labelledby="reviewers-heading"
-  >
-    <header class="flex flex-col gap-y-4 xl:flex-1">
+  <main class="xl:flex xl:h-screen xl:items-center">
+    <section
+      class="mx-auto flex max-w-6xl flex-col gap-y-10 px-3 py-10 lg:px-8 xl:flex-row xl:gap-x-10 xl:px-0"
+      aria-labelledby="reviewers-heading"
+    >
+      <header class="flex flex-col gap-y-4 xl:flex-1">
+        <div
+          class="flex size-12 items-center justify-center rounded-full bg-theme-yellow text-xl"
+          aria-hidden="true"
+        >
+          ⭐️
+        </div>
+        <h1 id="reviewers-heading" class="text-4xl font-bold text-theme-black">Reviewers</h1>
+        <p class="text-xl leading-8.5 text-theme-gray">
+          Reviewers is where people can access guidelines, checklists, and other tools to assist
+          them in reviewing papers or manuscripts. It provides a structured approach to ensure that
+          the review process is thorough, efficient, and consistent.
+        </p>
+        <ul class="mt-4 flex flex-col gap-y-3" role="list" aria-label="Features">
+          {
+            features.map((feature) => (
+              <li class="flex flex-row items-center gap-x-2 text-sm leading-6">
+                <img
+                  src="/Done_ring_round_fill.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width="24"
+                  height="24"
+                />{" "}
+                {feature}
+              </li>
+            ))
+          }
+        </ul>
+      </header>
+
       <div
-        class="flex size-12 items-center justify-center rounded-full bg-theme-yellow text-xl"
-        aria-hidden="true"
+        class="flex flex-col gap-y-9 md:px-50 xl:flex-1 xl:justify-between xl:px-0"
+        aria-label="Customer Reviews"
       >
-        ⭐️
-      </div>
-      <h1 id="reviewers-heading" class="text-4xl font-bold text-theme-black">Reviewers</h1>
-      <p class="text-xl leading-8.5 text-theme-gray">
-        Reviewers is where people can access guidelines, checklists, and other tools to assist them
-        in reviewing papers or manuscripts. It provides a structured approach to ensure that the
-        review process is thorough, efficient, and consistent.
-      </p>
-      <ul class="mt-4 flex flex-col gap-y-3" role="list" aria-label="Features">
         {
-          features.map((feature) => (
-            <li class="flex flex-row items-center gap-x-2 text-sm leading-6">
-              <img
-                src="/Done_ring_round_fill.svg"
-                alt=""
-                aria-hidden="true"
-                width="24"
-                height="24"
-              />{" "}
-              {feature}
-            </li>
+          reviews.map((review, index) => (
+            <AppCard
+              alignment={index % 2 === 0 ? "sm:self-end" : "sm:self-start"}
+              name={review.name}
+              rating={review.rating}
+              review={review.review}
+              socialMedia={review.socialMedia}
+            />
           ))
         }
-      </ul>
-    </header>
-
-    <div
-      class="flex flex-col gap-y-9 md:px-50 xl:flex-1 xl:justify-between xl:px-0"
-      aria-label="Customer Reviews"
-    >
-      {
-        reviews.map((review, index) => (
-          <AppCard
-            alignment={index % 2 === 0 ? "sm:self-end" : "sm:self-start"}
-            name={review.name}
-            rating={review.rating}
-            review={review.review}
-            socialMedia={review.socialMedia}
-          />
-        ))
-      }
-    </div>
-  </section>
+      </div>
+    </section>
+  </main>
 </MainLayout>
