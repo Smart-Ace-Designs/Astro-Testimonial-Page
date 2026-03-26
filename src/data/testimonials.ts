@@ -3,13 +3,13 @@ export const reviews = [
     name: "Samantha Lee",
     rating: 4,
     review: "The checklist ensures that the review process is thorough",
-    socialMedia: "/google-testimonial.svg",
+    socialMedia: "google-testimonial.svg",
   },
   {
     name: "Rachel Patel",
     rating: 5,
     review: "I highly recommend the Writecream Business Description",
-    socialMedia: "/meta-testimonial.svg",
+    socialMedia: "meta-testimonial.svg",
   },
 ];
 
